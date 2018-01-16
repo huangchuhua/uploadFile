@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./webuploader-0.1.5/webuploader.css">
+    <script src="./jquery-3.2.1.min.js"></script>
+    <script src="./webuploader-0.1.5/webuploader.js"></script>
+    <script src="./myUploader.js"></script>
+</head>
+
+<body>
+    <div id="uploader" style="margin-left:10px"></div>
+    <input type="button" value="1111" onclick="GetFiles1()" />
+
+    <script>
+        $(function () {
+            $("#uploader").powerWebUpload({
+                auto: false,
+                fileNumLimit: 5
+            });
+        })
+
+        function GetFiles1() {
+            var data = $("#uploader").GetFilesAddress();
+            alert(data[0])
+        }
+    </script>
+</body>
+
+</html>
